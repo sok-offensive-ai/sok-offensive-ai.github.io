@@ -99,7 +99,11 @@ form button:hover {
 }
 
 .separator {
-    border-top: 1px solid #ccc; /* Change color as desired */
-    margin: 20px 0; /* Adjust spacing as desired */
+    border-top: 1px solid #ccc;
+    margin: 20px 0; 
+}
+
+.space {
+    margin-bottom: 20px; 
 }
 
