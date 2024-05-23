@@ -175,11 +175,11 @@
 <p>
 <p>
             
-<div class="subtitle">Do you want to add a new paper? Please go ahead and submit a new entry.</div>
+<div class="subtitle"> Do you want to add a new paper? Please go ahead and submit a new entry.</div>
 <p>
  The submitted entry will be sent to us via mail. We will review the entry and add it to the list, if it is relevant. Please note that this may take up to a week.
 <p>
-<form id="inputForm">
+<form id="inputForm" action="submit_entry.php" method="post">
     <label for="tableSelect">Select Table:</label>
     <select id="tableSelect">
         <option value="table1">Academic Papers (technical)</option>
@@ -232,56 +232,6 @@
 
     <button type="button" onclick="addEntry()">Add Entry</button>
 </form>
-
-<script>
-    function addEntry() {
-        // Get the selected table ID
-        const tableSelect = document.getElementById("tableSelect").value;
-
-        // Get the input values
-        const paper = document.getElementById("paper").value;
-        const year = document.getElementById("year").value;
-        const mitre = document.getElementById("mitre").value;
-        const other = document.getElementById("other").value;
-        const focus = document.getElementById("focus").value;
-        const counter = document.getElementById("counter").value;
-        const offensive = document.getElementById("offensive").value;
-        const target = document.getElementById("target").value;
-        const realToy = document.getElementById("realToy").value;
-        const social = document.getElementById("social").value;
-        const benefit = document.getElementById("benefit").value;
-        const cost = document.getElementById("cost").value;
-        const baseline = document.getElementById("baseline").value;
-        const code = document.getElementById("code").value;
-
-        // Create a new row
-        const newRow = document.createElement("tr");
-
-        // Create and append the cells
-        newRow.innerHTML = `
-            <td>${paper}</td>
-            <td>${year}</td>
-            <td>${mitre}</td>
-            <td>${other}</td>
-            <td>${focus}</td>
-            <td>${counter}</td>
-            <td>${offensive}</td>
-            <td>${target}</td>
-            <td>${realToy}</td>
-            <td>${social}</td>
-            <td>${benefit}</td>
-            <td>${cost}</td>
-            <td>${baseline}</td>
-            <td>${code}</td>
-        `;
-
-        // Append the new row to the selected table
-        document.getElementById(tableSelect).querySelector("tbody").appendChild(newRow);
-
-        // Reset the form
-        document.getElementById("inputForm").reset();
-    }
-</script>
 
 </body>
 </html>
