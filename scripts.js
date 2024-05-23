@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const table = document.getElementById(tableId);
         const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
         for (const row of rows) {
-            const cell = row.getElementsByTagName('td')[columnIndex - 1];
+            const cell = row.getElementsByTagName('td')[columnIndex];
             if (value === '' || cell.textContent === value) {
                 row.style.display = '';
             } else {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         uniqueValues.add('');
         const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
         for (const row of rows) {
-            uniqueValues.add(row.getElementsByTagName('td')[columnIndex - 1].textContent);
+            uniqueValues.add(row.getElementsByTagName('td')[columnIndex].textContent);
         }
         for (const value of uniqueValues) {
             const option = document.createElement('option');
@@ -32,4 +32,17 @@ document.addEventListener('DOMContentLoaded', function() {
             select.appendChild(option);
         }
         select.addEventListener('change', (e) => {
-            filterTables(tableId, columnIndex, e.target.value
+            filterTables(tableId, columnIndex, e.target.value);
+        });
+        filterCell.appendChild(select);
+        filterRow.appendChild(filterCell);
+    };
+
+    const columnsToFilter = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // Adjusted to target the specified columns
+
+    ['table1', 'table2', 'table3'].forEach((tableId) => {
+        columnsToFilter.forEach((columnIndex) => {
+            createFilter(tableId, columnIndex);
+        });
+    });
+});
