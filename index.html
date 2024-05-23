@@ -193,46 +193,46 @@ Please go ahead and submit a new entry to one of the tables.
     </select>
     <br><br>
 
-    <label for="paper">Paper:</label>
+    <label for="paper">Paper. Please list the first author and provide a link to the paper:</label>
     <input type="text" id="paper" name="paper"><br><br>
 
     <label for="year">Year:</label>
     <input type="text" id="year" name="year"><br><br>
 
-    <label for="mitre">MITRE:</label>
+    <label for="mitre">MITRE ATT&CK Tactic. Please specify which matrix you used (Enterprise, ICS, Mobile):</label>
     <input type="text" id="mitre" name="mitre"><br><br>
 
-    <label for="other">Other:</label>
+    <label for="other">Other. Please specify: Attack on society, Privacy Attack, Attack in (cyber) war, or Autonomous Attack (AA):</label>
     <input type="text" id="other" name="other"><br><br>
 
-    <label for="focus">Focus:</label>
+    <label for="focus">Focus. Please specify whether the focus is defense (offensive security), attack, or using AI as an assistant:</label>
     <input type="text" id="focus" name="focus"><br><br>
 
-    <label for="counter">Counter.?</label>
+    <label for="counter">If, the focus is attack, have the authors considered countermeasures against the suggested attack? If not, just put "-".</label>
     <input type="text" id="counter" name="counter"><br><br>
 
-    <label for="offensive">Offens.?</label>
+    <label for="offensive">If the focus is defense, have the authors mentioned any potential abuse of the suggested technique for offensive purposes?  </label>
     <input type="text" id="offensive" name="offensive"><br><br>
 
-    <label for="target">Targ.:</label>
+    <label for="target">Target: Who is the target of the attack: a human, a system, or both?:</label>
     <input type="text" id="target" name="target"><br><br>
 
-    <label for="realToy">Real/Toy System:</label>
+    <label for="realToy">If a system is part of the target, is the system considered in the paper a real or toy system?:</label>
     <input type="text" id="realToy" name="realToy"><br><br>
 
-    <label for="social">Social Aspect:</label>
+    <label for="social">Did the authors consider the social aspect? Please count the occurrences of words such as,“society,” “social,” “societal,” or “socio.”</label>
     <input type="text" id="social" name="social"><br><br>
 
-    <label for="benefit">Benefit:</label>
+    <label for="benefit">Benefits: Did the authors analyze the benefits of the attacker leveraging the proposed AI technique? Please consider either (a) No, no mention, (b) Yes, qualitative: Just a discussion, (c) Yes, quantitative (e.g., based on accuracy/precision), or (d) Yes, clear mention of monetary benefit or time/resources saved according to some metrics that go beyond sheer accuracy/precision </label>
     <input type="text" id="benefit" name="benefit"><br><br>
 
-    <label for="cost">Cost:</label>
+    <label for="cost">Cost: Did the authors analyse the costs for designing/building/implementing the proposed technique? (a) No, no mention, (b) Yes, qualitative: Just a discussion, (c) Yes, quantitative, or (d) Yes, clear mention of the required $$ to launch the attack </label>
     <input type="text" id="cost" name="cost"><br><br>
 
-    <label for="baseline">Baseline Comp.?</label>
+    <label for="baseline"> Non-AI-baseline comparison: Could the same objective be achieved without AI? (a) No, no mention, (b) Yes, qualitative: Just a discussion, (c) Yes, quantitative </label>
     <input type="text" id="baseline" name="baseline"><br><br>
 
-    <label for="code">Code:</label>
+    <label for="code">Did the authors share the code or the prompts if an LLM was involved? Please add the link, if applicable. </label>
     <input type="text" id="code" name="code"><br><br>
 
     <button type="button" onclick="addEntry()">Add Entry</button>
