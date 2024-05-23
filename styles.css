@@ -86,3 +86,14 @@ form button {
 form button:hover {
             background-color: #45a049;
         }
+
+.form-container {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+#inputForm {
+    max-width: 600px;
+    margin: 0 auto;
+}
