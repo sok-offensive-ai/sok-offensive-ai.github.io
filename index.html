@@ -188,10 +188,10 @@
     <br><br>
 
     <label for="paper">Paper: Please list the first author of the paper and provide a link or the DOI.</label>
-    <input type="text" id="paper" name="paper"><br><br>
+    <input type="text" id="paper" name="paper" required><br><br>
 
     <label for="year">Year: When was the paper published?</label>
-    <input type="text" id="year" name="year"><br><br>
+    <input type="text" id="paper" name="paper" required><br><br>
 
     <label for="mitre"> <a href="https://attack.mitre.org/">MITRE ATT&CK Tactic.</a> Please specify (i) the MITRE ATT&CK tactic the paper is addressing, and (ii) the matrix you used (Enterprise, ICS, Mobile).</label>
     <input type="text" id="mitre" name="mitre"><br><br>
@@ -245,6 +245,10 @@
 
     <label for="code">Did the authors share the code or the prompts if an LLM was used in the experiments? Please add the link, if applicable. </label>
     <input type="text" id="code" name="code"><br><br>
+
+    <label for="email">Please share your email address, so that we can contact you in case of questions and also provide credit. </label>
+    <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br><br>
+
 
     <button type="button" onclick="addEntry()">Add Entry</button>
 </form>
