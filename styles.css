@@ -97,3 +97,9 @@ form button:hover {
     max-width: 600px;
     margin: 0 auto;
 }
+
+.separator {
+    border-top: 1px solid #ccc; /* Change color as desired */
+    margin: 20px 0; /* Adjust spacing as desired */
+}
+
