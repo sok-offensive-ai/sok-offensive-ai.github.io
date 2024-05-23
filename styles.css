@@ -1,51 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f8f9fa;
-    color: #333;
-}
-
-header {
-    background-color: #343a40;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #e9ecef;
-    color: white;
+    background-color: lightblue;
 }
 
 h1 {
-    margin: 0;
-    font-size: 2em;
+    color: green;
 }
 
 p {
-    font-size: 1em;
-    line-height: 1.6;
-    margin: 20px 0;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: white;
-}
-
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #e9ecef;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    font-size: 20px;
 }
