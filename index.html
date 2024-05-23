@@ -170,10 +170,10 @@
             
 <div class="subtitle"> Do you want to add a new paper? Please go ahead and submit a new entry.</div>
 <p>
- The submitted entry will be sent to us via mail. We will review the entry and add it to the list, if it is relevant. Please note that this may take up to a week.
+ The submitted entry will be sent to us via mail. We will review the entry and add it to the list, if it is relevant. Please note that this may take up to two weeks.
 <p>
 <form id="inputForm" action="submit_entry.php" method="post">
-    <label for="tableSelect">Select Table:</label>
+    <label for="tableSelect">Please select the table to which you would like to add an entry:</label>
     <select id="tableSelect">
         <option value="table1">Academic Papers (technical)</option>
         <option value="table2">Academic Papers (non-technical)</option>
@@ -181,25 +181,25 @@
     </select>
     <br><br>
 
-    <label for="paper">Paper. Please list the first author and provide a link to the paper:</label>
+    <label for="paper">Paper: Please list the first author of the paper and provide a link or the DOI.</label>
     <input type="text" id="paper" name="paper"><br><br>
 
-    <label for="year">Year:</label>
+    <label for="year">Year: When was the paper published?</label>
     <input type="text" id="year" name="year"><br><br>
 
-    <label for="mitre">MITRE ATT&CK Tactic. Please specify which matrix you used (Enterprise, ICS, Mobile):</label>
+    <label for="mitre"> <a href="https://attack.mitre.org/">MITRE ATT&CK Tactic.</a>Please specify (i) the MITRE ATT&CK tactic the paper is addressing, and (ii) the matrix you used (Enterprise, ICS, Mobile).</label>
     <input type="text" id="mitre" name="mitre"><br><br>
 
-    <label for="other">Other. Please specify: Attack on society, Privacy Attack, Attack in (cyber) war, or Autonomous Attack (AA):</label>
+    <label for="other">If the paper did not focus on any MITRE ATT&CK tactic, please specify if the focus lies on any of the folllowing OAI use cases: attack on society, privacy attack, attack in (cyber) war, or autonomous attack (AA):</label>
     <input type="text" id="other" name="other"><br><br>
 
-    <label for="focus">Focus. Please specify whether the focus is defense (offensive security), attack, or using AI as an assistant:</label>
+    <label for="focus">Focus: Please specify whether the focus of the paper is defense (offensive security), attack, or using AI as an assistant:</label>
     <input type="text" id="focus" name="focus"><br><br>
 
-    <label for="counter">If, the focus is attack, have the authors considered countermeasures against the suggested attack? If not, just put "-".</label>
+    <label for="counter">If, the focus is attack, have the authors considered countermeasures against the suggested attack? If not, just put "-" </label>
     <input type="text" id="counter" name="counter"><br><br>
 
-    <label for="offensive">If the focus is defense, have the authors mentioned any potential abuse of the suggested technique for offensive purposes?  </label>
+    <label for="offensive">If the focus is defense, have the authors mentioned any potential abuse of the suggested technique for offensive purposes? If not, just put "-" </label>
     <input type="text" id="offensive" name="offensive"><br><br>
 
     <label for="target">Target: Who is the target of the attack: a human, a system, or both?:</label>
@@ -219,6 +219,32 @@
 
     <label for="baseline"> Non-AI-baseline comparison: Could the same objective be achieved without AI? (a) No, no mention, (b) Yes, qualitative: Just a discussion, (c) Yes, quantitative </label>
     <input type="text" id="baseline" name="baseline"><br><br>
+
+    <label for="benefit">Benefits: Did the authors analyze the benefits of the attacker leveraging the proposed AI technique? Please consider either:</label>
+        <div class="form-group">
+            <div>(a) No, no mention</div>
+            <div>(b) Yes, qualitative: Just a discussion</div>
+            <div>(c) Yes, quantitative (e.g., based on accuracy/precision)</div>
+            <div>(d) Yes, clear mention of monetary benefit or time/resources saved according to some metrics that go beyond sheer accuracy/precision</div>
+        </div>
+        <input type="text" id="benefit" name="benefit">
+        
+    <label for="cost">Cost: Did the authors analyse the costs for designing/building/implementing the proposed technique? Please consider either:</label>
+        <div class="form-group">
+            <div>(a) No, no mention</div>
+            <div>(b) Yes, qualitative: Just a discussion</div>
+            <div>(c) Yes, quantitative</div>
+            <div>(d) Yes, clear mention of the required $$ to launch the attack</div>
+        </div>
+        <input type="text" id="cost" name="cost">
+        
+    <label for="baseline">Non-AI-baseline comparison: Could the same objective be achieved without AI? Please consider either:</label>
+        <div class="form-group">
+            <div>(a) No, no mention</div>
+            <div>(b) Yes, qualitative: Just a discussion</div>
+            <div>(c) Yes, quantitative</div>
+        </div>
+        <input type="text" id="baseline" name="baseline">
 
     <label for="code">Did the authors share the code or the prompts if an LLM was involved? Please add the link, if applicable. </label>
     <input type="text" id="code" name="code"><br><br>
