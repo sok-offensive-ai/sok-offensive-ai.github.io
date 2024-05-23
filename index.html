@@ -168,10 +168,10 @@
 <p>
 <p>
             
-<div class="subtitle"> Do you want to add a new paper? Please go ahead and submit a new entry.</div>
-<p>
- The submitted entry will be sent to us via mail. We will review the entry and add it to the list, if it is relevant. Please note that this may take up to two weeks.
-<p>
+<div class="form-container">
+    <div class="subtitle">Do you want to add a new paper? Please go ahead and submit a new entry.</div>
+    <p>The submitted entry will be sent to us via mail. We will review the entry and add it to the list, if it is relevant. Please note that this may take up to two weeks.</p>
+</div>
 <form id="inputForm" action="submit_entry.php" method="post">
     <label for="tableSelect">Please select the table to which you would like to add an entry:</label>
     <select id="tableSelect">
@@ -205,7 +205,7 @@
     <label for="target">Target: Who is the target of the attack: a human, a system, or both?:</label>
     <input type="text" id="target" name="target"><br><br>
 
-    <label for="realToy">If a system is part of the target, is the system considered in the paper a real or toy system?:</label>
+    <label for="realToy">If a system is part of the target, is the system considered in the paper a real or toy system?</label>
     <input type="text" id="realToy" name="realToy"><br><br>
 
     <label for="social">Did the authors consider the social aspect? Please count the occurrences of words such as,“society,” “social,” “societal,” or “socio.”</label>
@@ -237,7 +237,7 @@
         </div>
         <input type="text" id="baseline" name="baseline">
 
-    <label for="code">Did the authors share the code or the prompts if an LLM was involved? Please add the link, if applicable. </label>
+    <label for="code">Did the authors share the code or the prompts if an LLM was used in the experiments? Please add the link, if applicable. </label>
     <input type="text" id="code" name="code"><br><br>
 
     <button type="button" onclick="addEntry()">Add Entry</button>
