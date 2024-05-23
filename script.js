@@ -33,13 +33,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         // Append filter dropdowns to the table header row
-        const filterRow = document.createElement("tr");
-        filters.forEach(filter => {
-            const th = document.createElement("th");
-            th.appendChild(filter);
-            filterRow.appendChild(th);
-        });
+        const thead = table.querySelector("thead");
+        if (thead) {
+            const filterRow = document.createElement("tr");
+            filters.forEach(filter => {
+                const th = document.createElement("th");
+                th.appendChild(filter);
+                filterRow.appendChild(th);
+            });
 
-        table.querySelector("thead").appendChild(filterRow);
+            thead.appendChild(filterRow);
+        } else {
+            console.error("Table header not found:", table);
+        }
     });
 });
