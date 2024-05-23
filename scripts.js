@@ -38,10 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
         filterRow.appendChild(filterCell);
     };
 
-    const columnsToFilter = {
-        1: [2], // Year
-        2: [2], // Year
-        3: [2]  // Year
-    };
+    const columnsToFilter = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
-    const columns = [2, 3, 4, 5, 6, 
+    ['table1', 'table2', 'table3'].forEach((tableId) => {
+        columnsToFilter.forEach((columnIndex) => {
+            createFilter(tableId, columnIndex);
+        });
+    });
+});
