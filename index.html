@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Input Form</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SoK: Offensive AI</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
-    <div class="subtitle">Academic Papers (technical)</div>
-    <table id="table1">
+<header>
+    <h1>SoK: On the Offensive Potential of AI</h1>
+</header>
+
+<main>
+    <p>
+        This website is the complementary online tool to our paper "SoK: On the offensive potential of AI."  It includes a list of academic papers (technical and non-technical) and InfoSec briefings (from BlackHat and DefCon), scrutinized based on the offensive AI checklist we developed in our paper.
+        The checklist is a lifelong classification of the key-factors of technologies related to offensive AI, allowing us to objectively examine and compare existing and novel use-cases of offensive AI according to a clearly defined set of criteria. Further details will be provided after the paper has been published.
+    </p>
+    <p>
+        Below, we provide three lists: (i) for the technical papers, (ii) for the non-technical papers, and (iii) for the InfoSec briefings. The key difference between technical and non-technical papers is that technical papers must demonstrate a practical implementation of the AI model.
+    </p>
+        <div class="subtitle">Academic Papers (technical)</div>
+        <table id="table1">
+    </p>
+
+
+    <table>
         <thead>
             <tr>
                 <th rowspan="2">Paper</th>
@@ -35,9 +51,9 @@
         </thead>
         <tbody>
             <tr>
-                <td><a href="https://link.springer.com/article/10.1007/s11416-024-00512-6">Antonelli</a></td>
+                <td> <a href="https://link.springer.com/article/10.1007/s11416-024-00512-6">Antonelli</a> </td>
                 <td>2024</td>
-                <td>Initial Access</td>
+                <td>Initial Access </td>
                 <td>-</td>
                 <td>defense</td>
                 <td>-</td>
@@ -53,8 +69,15 @@
         </tbody>
     </table>
 
-    <div class="subtitle">Academic Papers (non-technical)</div>
-    <table id="table2">
+    <p>
+
+    </p>
+        <div class="subtitle">Academic Papers (non-technical)</div>
+        <table id="table2">
+    </p>
+
+
+    <table>
         <thead>
             <tr>
                 <th rowspan="2">Paper</th>
@@ -80,7 +103,7 @@
         </thead>
         <tbody>
             <tr>
-                <td><a href="https://www.tandfonline.com/doi/full/10.1080/01402390.2022.2104255">Dall’Agnol</a></td>
+                <td> <a href="https://www.tandfonline.com/doi/full/10.1080/01402390.2022.2104255">Dall’Agnol</a> </td>
                 <td>2023</td>
                 <td>-</td>
                 <td>Atk in (cyber) warfare</td>
@@ -98,8 +121,15 @@
         </tbody>
     </table>
 
-    <div class="subtitle">InfoSec Briefings (from DefCon and BlackHat)</div>
-    <table id="table3">
+    <p>
+
+     </p>
+        <div class="subtitle">InfoSec Briefings (from DefCon and BlackHat)</div>
+        <table id="table3">
+    </p>
+
+
+    <table>
         <thead>
             <tr>
                 <th rowspan="2">Paper</th>
@@ -125,7 +155,7 @@
         </thead>
         <tbody>
             <tr>
-                <td><a href="https://www.youtube.com/watch?v=V96A5Yc7uMs">Scheiner</a></td>
+                <td> <a href="https://www.youtube.com/watch?v=V96A5Yc7uMs">Scheiner</a> </td>
                 <td>2023</td>
                 <td>-</td>
                 <td>Atk. on society</td>
@@ -143,110 +173,117 @@
         </tbody>
     </table>
 
-    <div class="subtitle">Add New Entry</div>
-    <form id="inputForm">
-        <label for="tableSelect">Select Table:</label>
-        <select id="tableSelect">
-            <option value="table1">Academic Papers (technical)</option>
-            <option value="table2">Academic Papers (non-technical)</option>
-            <option value="table3">InfoSec Briefings (from DefCon and BlackHat)</option>
-        </select>
-        <br><br>
+    <p>
+    If you spot any mistakes, or missing papers, feel free to contact us (anonymous for now, but we will add credentials after having published the paper).
+    Feel free to submit any paper about offensive AI that you find and provide us your suggestions based on the offensive AI checklist. As detailed description of the checklist can be found in our paper.
+    </p>
+</main>
 
-        <label for="paper">Paper:</label>
-        <input type="text" id="paper" name="paper"><br><br>
 
-        <label for="year">Year:</label>
-        <input type="text" id="year" name="year"><br><br>
+<div class="subtitle">Add A New Paper</div>
+<form id="inputForm">
+    <label for="tableSelect">Select Table:</label>
+    <select id="tableSelect">
+        <option value="table1">Academic Papers (technical)</option>
+        <option value="table2">Academic Papers (non-technical)</option>
+        <option value="table3">InfoSec Briefings (from DefCon and BlackHat)</option>
+    </select>
+    <br><br>
 
-        <label for="mitre">MITRE:</label>
-        <input type="text" id="mitre" name="mitre"><br><br>
+    <label for="paper">Paper:</label>
+    <input type="text" id="paper" name="paper"><br><br>
 
-        <label for="other">Other:</label>
-        <input type="text" id="other" name="other"><br><br>
+    <label for="year">Year:</label>
+    <input type="text" id="year" name="year"><br><br>
 
-        <label for="focus">Focus:</label>
-        <input type="text" id="focus" name="focus"><br><br>
+    <label for="mitre">MITRE:</label>
+    <input type="text" id="mitre" name="mitre"><br><br>
 
-        <label for="counter">Counter.?</label>
-        <input type="text" id="counter" name="counter"><br><br>
+    <label for="other">Other:</label>
+    <input type="text" id="other" name="other"><br><br>
 
-        <label for="offensive">Offens.?</label>
-        <input type="text" id="offensive" name="offensive"><br><br>
+    <label for="focus">Focus:</label>
+    <input type="text" id="focus" name="focus"><br><br>
 
-        <label for="target">Targ.:</label>
-        <input type="text" id="target" name="target"><br><br>
+    <label for="counter">Counter.?</label>
+    <input type="text" id="counter" name="counter"><br><br>
 
-        <label for="realToy">Real/Toy System:</label>
-        <input type="text" id="realToy" name="realToy"><br><br>
+    <label for="offensive">Offens.?</label>
+    <input type="text" id="offensive" name="offensive"><br><br>
 
-        <label for="social">Social Aspect:</label>
-        <input type="text" id="social" name="social"><br><br>
+    <label for="target">Targ.:</label>
+    <input type="text" id="target" name="target"><br><br>
 
-        <label for="benefit">Benefit:</label>
-        <input type="text" id="benefit" name="benefit"><br><br>
+    <label for="realToy">Real/Toy System:</label>
+    <input type="text" id="realToy" name="realToy"><br><br>
 
-        <label for="cost">Cost:</label>
-        <input type="text" id="cost" name="cost"><br><br>
+    <label for="social">Social Aspect:</label>
+    <input type="text" id="social" name="social"><br><br>
 
-        <label for="baseline">Baseline Comp.?</label>
-        <input type="text" id="baseline" name="baseline"><br><br>
+    <label for="benefit">Benefit:</label>
+    <input type="text" id="benefit" name="benefit"><br><br>
 
-        <label for="code">Code:</label>
-        <input type="text" id="code" name="code"><br><br>
+    <label for="cost">Cost:</label>
+    <input type="text" id="cost" name="cost"><br><br>
 
-        <button type="button" onclick="addEntry()">Add Entry</button>
-    </form>
+    <label for="baseline">Baseline Comp.?</label>
+    <input type="text" id="baseline" name="baseline"><br><br>
 
-    <script>
-        function addEntry() {
-            // Get the selected table ID
-            const tableSelect = document.getElementById("tableSelect").value;
+    <label for="code">Code:</label>
+    <input type="text" id="code" name="code"><br><br>
 
-            // Get the input values
-            const paper = document.getElementById("paper").value;
-            const year = document.getElementById("year").value;
-            const mitre = document.getElementById("mitre").value;
-            const other = document.getElementById("other").value;
-            const focus = document.getElementById("focus").value;
-            const counter = document.getElementById("counter").value;
-            const offensive = document.getElementById("offensive").value;
-            const target = document.getElementById("target").value;
-            const realToy = document.getElementById("realToy").value;
-            const social = document.getElementById("social").value;
-            const benefit = document.getElementById("benefit").value;
-            const cost = document.getElementById("cost").value;
-            const baseline = document.getElementById("baseline").value;
-            const code = document.getElementById("code").value;
+    <button type="button" onclick="addEntry()">Add Entry</button>
+</form>
 
-            // Create a new row
-            const newRow = document.createElement("tr");
+<script>
+    function addEntry() {
+        // Get the selected table ID
+        const tableSelect = document.getElementById("tableSelect").value;
 
-            // Create and append the cells
-            newRow.innerHTML = `
-                <td>${paper}</td>
-                <td>${year}</td>
-                <td>${mitre}</td>
-                <td>${other}</td>
-                <td>${focus}</td>
-                <td>${counter}</td>
-                <td>${offensive}</td>
-                <td>${target}</td>
-                <td>${realToy}</td>
-                <td>${social}</td>
-                <td>${benefit}</td>
-                <td>${cost}</td>
-                <td>${baseline}</td>
-                <td>${code}</td>
-            `;
+        // Get the input values
+        const paper = document.getElementById("paper").value;
+        const year = document.getElementById("year").value;
+        const mitre = document.getElementById("mitre").value;
+        const other = document.getElementById("other").value;
+        const focus = document.getElementById("focus").value;
+        const counter = document.getElementById("counter").value;
+        const offensive = document.getElementById("offensive").value;
+        const target = document.getElementById("target").value;
+        const realToy = document.getElementById("realToy").value;
+        const social = document.getElementById("social").value;
+        const benefit = document.getElementById("benefit").value;
+        const cost = document.getElementById("cost").value;
+        const baseline = document.getElementById("baseline").value;
+        const code = document.getElementById("code").value;
 
-            // Append the new row to the selected table
-            document.getElementById(tableSelect).querySelector("tbody").appendChild(newRow);
+        // Create a new row
+        const newRow = document.createElement("tr");
 
-            // Reset the form
-            document.getElementById("inputForm").reset();
-        }
-    </script>
+        // Create and append the cells
+        newRow.innerHTML = `
+            <td>${paper}</td>
+            <td>${year}</td>
+            <td>${mitre}</td>
+            <td>${other}</td>
+            <td>${focus}</td>
+            <td>${counter}</td>
+            <td>${offensive}</td>
+            <td>${target}</td>
+            <td>${realToy}</td>
+            <td>${social}</td>
+            <td>${benefit}</td>
+            <td>${cost}</td>
+            <td>${baseline}</td>
+            <td>${code}</td>
+        `;
+
+        // Append the new row to the selected table
+        document.getElementById(tableSelect).querySelector("tbody").appendChild(newRow);
+
+        // Reset the form
+        document.getElementById("inputForm").reset();
+    }
+</script>
 
 </body>
 </html>
