@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
 
     // Construct email message
-    $to = "xxxx@gmail.com"; // Your email address
+    $to = "saskia.schroeer@uni.li"; // Your email address
     $subject = "New entry submitted for " . $tableSelect;
     $message = "Table: " . $tableSelect . "\n";
     $message .= "Paper: " . $paper . "\n";
