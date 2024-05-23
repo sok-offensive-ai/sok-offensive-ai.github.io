@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // If no errors, send email
     if (empty($errors)) {
         // Recipient email address (replace with your own)
-        $to_email = "saskia.schroeer@uni.li";
+        $to_email = "saskia.laura.schroeer@gmail.com";
 
         // Subject of the email
         $subject = "SoK-OAI New Entry";
