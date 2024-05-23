@@ -1,17 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("DOMContentLoaded event fired.");
     const tables = document.querySelectorAll("table");
-    console.log("Found tables:", tables);
 
     tables.forEach(table => {
         const headers = table.querySelectorAll("th");
-        console.log("Found headers:", headers);
-
         const filters = [];
 
         headers.forEach((header, index) => {
             const filterOptions = new Set();
-            if (index > 1) { // Skip the first two columns (Paper and Year)
+            if (index >= 1) { // Start filtering from the second header (Year) onwards
                 table.querySelectorAll(`tbody td:nth-child(${index + 1})`).forEach(cell => {
                     filterOptions.add(cell.textContent.trim());
                 });
@@ -37,19 +33,13 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         // Append filter dropdowns to the table header row
-        const thead = table.querySelector("thead");
-        console.log("Found thead:", thead);
-        if (thead) {
-            const filterRow = document.createElement("tr");
-            filters.forEach(filter => {
-                const th = document.createElement("th");
-                th.appendChild(filter);
-                filterRow.appendChild(th);
-            });
+        const filterRow = document.createElement("tr");
+        filters.forEach(filter => {
+            const th = document.createElement("th");
+            th.appendChild(filter);
+            filterRow.appendChild(th);
+        });
 
-            thead.appendChild(filterRow);
-        } else {
-            console.error("Table header not found:", table);
-        }
+        table.querySelector("thead").appendChild(filterRow);
     });
 });
