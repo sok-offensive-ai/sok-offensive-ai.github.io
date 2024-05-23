@@ -1,48 +1,33 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const filterTables = (tableId, columnIndex, value) => {
-        const table = document.getElementById(tableId);
-        const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
-        for (const row of rows) {
-            const cell = row.getElementsByTagName('td')[columnIndex];
-            if (value === '' || cell.textContent === value) {
-                row.style.display = '';
-            } else {
-                row.style.display = 'none';
-            }
-        }
-    };
+function filterTable() {
+  // Get the table and the dropdowns
+  var table = document.getElementById('table1');
+  var dropdowns = ['mitreFilter', 'otherFilter', 'focusFilter', 'counterFilter', 'offensFilter', 'targFilter', 'realToyFilter', 'socialFilter', 'benefitFilter', 'costFilter', 'baselineFilter', 'codeFilter'];
 
-    const createFilter = (tableId, columnIndex) => {
-        const table = document.getElementById(tableId);
-        const filterRow = document.getElementById(`filters${tableId.slice(-1)}`);
-        if (!filterRow) return; // Check if the filter row exists
+  // Loop through the table rows
+  for (var i = 1; i < table.rows.length; i++) {
+    var row = table.rows[i];
+    var showRow = true;
 
-        const filterCell = document.createElement('th');
-        const select = document.createElement('select');
-        const uniqueValues = new Set();
-        uniqueValues.add('');
-        const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
-        for (const row of rows) {
-            uniqueValues.add(row.getElementsByTagName('td')[columnIndex].textContent);
-        }
-        for (const value of uniqueValues) {
-            const option = document.createElement('option');
-            option.value = value;
-            option.textContent = value;
-            select.appendChild(option);
-        }
-        select.addEventListener('change', (e) => {
-            filterTables(tableId, columnIndex, e.target.value);
-        });
-        filterCell.appendChild(select);
-        filterRow.appendChild(filterCell);
-    };
+    // Loop through the dropdowns
+    for (var j = 0; j < dropdowns.length; j++) {
+      var dropdown = document.getElementById(dropdowns[j]);
+      var cell = row.cells[j + 2];
+      var value = cell.textContent || cell.innerText;
 
-    const columnsToFilter = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; // Adjusted to target the specified columns
+      // If the dropdown has a value and the table cell doesn't match, hide the row
+      if (dropdown.value && dropdown.value !== value) {
+        showRow = false;
+        break;
+      }
+    }
 
-    ['table1', 'table2', 'table3'].forEach((tableId) => {
-        columnsToFilter.forEach((columnIndex) => {
-            createFilter(tableId, columnIndex);
-        });
-    });
-});
+    // Show or hide the row
+    row.style.display = showRow ? '' : 'none';
+  }
+}
+
+// Add an event listener to each dropdown
+var dropdowns = ['mitreFilter', 'otherFilter', 'focusFilter', 'counterFilter', 'offensFilter', 'targFilter', 'realToyFilter', 'socialFilter', 'benefitFilter', 'costFilter', 'baselineFilter', 'codeFilter'];
+for (var i = 0; i < dropdowns.length; i++) {
+  document.getElementById(dropdowns[i]).addEventListener('change', filterTable);
+}
