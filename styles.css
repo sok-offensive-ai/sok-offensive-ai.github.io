@@ -120,3 +120,11 @@ form button:hover {
 .submit-button:hover {
     background-color: darkgreen;
 }
+
+.lavender-bg {
+    background-color: lavender;
+}
+
+.light-green-bg {
+    background-color: lightgreen;
+}
