@@ -2172,7 +2172,12 @@
     <input type="text" id="offensive" name="offensive"><br><br>
 
     <label for="target">Target: Who is the target of the attack: a human, a system, or both?</label>
-    <input type="text" id="target" name="target"><br><br>
+    <select id="target" name="target">
+    <option value="human">Human</option>
+    <option value="system">System</option>
+    <option value="both">Both</option>
+    <option value="n/a">n/a</option>
+    </select>
 
 
     <label for="realToy">If a system is part of the target, is the system considered in the paper a real or toy system?</label>
