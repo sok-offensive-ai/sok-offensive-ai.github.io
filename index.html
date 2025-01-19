@@ -2188,7 +2188,6 @@
     <option value="both">both</option>
     </select>
 
-
     <label for="realToy">If a system is part of the target, is the system considered in the paper a real or toy system?</label>
     <select id="realToy" name="realToy">
     <option value="n/a">n/a</option>
@@ -2207,7 +2206,7 @@
     <option value="Yes, clear mention of monetary benefit or time/resources saved according to some metrics that go beyond sheer accuracy/precision">Yes, clear mention of monetary benefit or time/resources saved according to some metrics that go beyond sheer accuracy/precision</option>
     </select>
         
-    <label for="cost">Cost: Did the authors analyze the costs for designing/building/implementing the proposed technique? Please consider either:</label>
+    <label for="cost">Cost: Did the authors analyze the costs for designing/building/implementing the proposed technique?</label>
     <select id="cost" name="cost">
     <option value="No, no mention">No, no mention</option>
     <option value="Yes, qualitative: Just a discussion">Yes, qualitative: Just a discussion</option>
@@ -2216,12 +2215,11 @@
     </select>
         
     <label for="baseline">Non-AI-baseline comparison: Could the same objective be achieved without AI? Please consider either:</label>
-        <div class="form-group">
-            <div>(a) No, no mention</div>
-            <div>(b) Yes, qualitative: Just a discussion</div>
-            <div>(c) Yes, quantitative</div>
-        </div>
-        <input type="text" id="baseline" name="baseline">
+    <select id="comparsion" name="comparsion">
+    <option value="No, no mention">No, no mention</option>
+    <option value="Yes, qualitative: Just a discussion">Yes, qualitative: Just a discussion</option>
+    <option value="Yes, quantitative">Yes, quantitative</option>
+    </select>
 
     <label for="code">Did the authors share the code or the prompts if an LLM was used in the experiments? Please add the link, if applicable. </label>
     <input type="text" id="code" name="code"><br><br>
