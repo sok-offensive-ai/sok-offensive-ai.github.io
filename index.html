@@ -2169,7 +2169,11 @@
     </select>
 
     <label for="focus">Focus: Please specify whether the focus of the paper is defense (offensive security), attack, or using AI as an assistant:</label>
-    <input type="text" id="focus" name="focus"><br><br>
+     <select id="focus" name="focus" >
+        <option value="defense (offensive security)">defense (offensive security)</option>
+        <option value="attack">attack</option>
+        <option value="AI as an assistant">AI as an assistant</option>
+    </select>
 
     <label for="counter">If, the focus is attack, have the authors considered countermeasures against the suggested attack? If not, just put "-" </label>
     <input type="text" id="counter" name="counter"><br><br>
