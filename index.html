@@ -2199,14 +2199,13 @@
     <label for="social">Did the authors consider the social aspect? Please count the occurrences of words such as,“society,” “social,” “societal,” or “socio.”</label>
     <input type="text" id="social" name="social"><br><br>
 
-    <label for="benefit">Benefits: Did the authors analyze the benefits of the attacker leveraging the proposed AI technique? Please consider either:</label>
-        <div class="form-group">
-            <div>(a) No, no mention</div>
-            <div>(b) Yes, qualitative: Just a discussion</div>
-            <div>(c) Yes, quantitative (e.g., based on accuracy/precision)</div>
-            <div>(d) Yes, clear mention of monetary benefit or time/resources saved according to some metrics that go beyond sheer accuracy/precision</div>
-        </div>
-        <input type="text" id="benefit" name="benefit">
+    <label for="benefit">Benefits: Did the authors analyze the benefits of the attacker leveraging the proposed AI technique?
+    <select id="benefit" name="benefit">
+    <option value="No, no mention">No, no mention</option>
+    <option value="Yes, qualitative: Just a discussion">Yes, qualitative: Just a discussion</option>
+    <option value="Yes, quantitative (e.g., based on accuracy/precision)">Yes, quantitative (e.g., based on accuracy/precision)</option>
+    <option value="Yes, clear mention of monetary benefit or time/resources saved according to some metrics that go beyond sheer accuracy/precision">Yes, clear mention of monetary benefit or time/resources saved according to some metrics that go beyond sheer accuracy/precision</option>
+    </select>
         
     <label for="cost">Cost: Did the authors analyze the costs for designing/building/implementing the proposed technique? Please consider either:</label>
         <div class="form-group">
