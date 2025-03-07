@@ -19,7 +19,7 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: 700;
 }
 
@@ -29,7 +29,7 @@ p {
 }
 
 table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     margin: 20px 0;
     background-color: white;
@@ -124,7 +124,7 @@ form button:hover {
 }
 
 .submit-button {
-    background-color: #2ecc71;
+    background-color: #3498db;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -135,7 +135,7 @@ form button:hover {
 }
 
 .submit-button:hover {
-    background-color: #27ae60;
+    background-color: #2980b9;
 }
 
 .light-green-bg {
